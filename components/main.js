@@ -12,7 +12,7 @@ import {
 } from 'recoil';
 
 const countAtom = atom({
-  key: 'count-atom',
+  key: 'countAtom',
   default: 10,
 });
 
