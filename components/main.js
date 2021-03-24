@@ -1,15 +1,6 @@
 import Head from 'next/head'
-import { Container } from 'semantic-ui-react'
-import { Button } from 'semantic-ui-react'
-import { Grid, Column, Header } from 'semantic-ui-react'
-
-import {
-  atom,
-  useRecoilState,
-  useResetRecoilState,
-  selector,
-  useRecoilValue,
-} from 'recoil';
+import { Container, Button, Grid, Column, Header, Progress } from 'semantic-ui-react'
+import { atom, useRecoilState, useResetRecoilState, selector, useRecoilValue } from 'recoil';
 
 const countAtom = atom({
   key: 'countAtom',
@@ -33,12 +24,13 @@ const Main = (props) => {
   const countValue = useRecoilValue(countAtom);
   const percentage = useRecoilValue(countAtom)
 
+
   return (
     <Container text>
-
       <br></br>
       <h2>The count value is : {count} </h2>
       <h3>The font size of potty is : {fontSize} px </h3>
+        <Progress percent={percentage} indicating />
 
       <Button onClick={() => setCount(count + 1)}>Increase count</Button>
       <Button onClick={resetCount}>reset count</Button>
