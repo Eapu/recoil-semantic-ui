@@ -1,9 +1,6 @@
 
 
 //const onToggleMenu = () => {console.log("toggle");}
-
-
-
 const Header = (props) => {
   return (
     <div>
